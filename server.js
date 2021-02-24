@@ -13,6 +13,8 @@ res.redirect(`/${uuidV4()}`)
 
 });
 
+
+
 app.get('/:room',(req,res)=>{
     res.render('room',{roomId:req.params.room})
 });
@@ -30,3 +32,4 @@ io.on('connection',socket=>{
 })
 
 server.listen(3000);
+console.log(server.address());
